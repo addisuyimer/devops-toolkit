@@ -2,7 +2,7 @@
 apiVersion: source.toolkit.fluxcd.io/v1
 kind: GitRepository
 metadata:
-  name: devops-toolkit
+  name: devops-toolkit-prod
   namespace: flux-system
 spec:
   interval: 30s
@@ -13,11 +13,11 @@ spec:
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
-  name: devops-toolkit
+  name: devops-toolkit-prod
   namespace: flux-system
 spec:
   interval: 10m0s
-  path: ./overlays/stage 
+  path: ./overlays/prod
   prune: true
   sourceRef:
     kind: GitRepository
