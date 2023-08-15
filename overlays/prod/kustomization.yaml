@@ -8,7 +8,7 @@ commonLabels:
 patches:
   - target:
       kind: Deployment
-      name: busybox-deployment
+      name: busybox
     patch: |-
       - op: replace
         path: /spec/replicas
