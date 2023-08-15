@@ -16,7 +16,7 @@ metadata:
   name: devops-toolkit-stage
   namespace: flux-system
 spec:
-  interval: 10m0s
+  interval: 1m0s
   path: ./overlays/stage 
   prune: true
   sourceRef:
